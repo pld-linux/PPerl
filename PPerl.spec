@@ -6,12 +6,13 @@
 Summary:	A persistent Perl interpreter system, designed to speed up Perl scripts
 Summary(pl):	Trwa³y system interpretera Perla s³u¿±cy do przyspieszenia skryptów
 Name:		PPerl
-Version:	0.24
-Release:	0.1
-License:	unknown
+Version:	0.25
+Release:	1
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/MS/MSERGEANT/%{name}-%{version}.tar.gz
-# Source0-md5:	ce1407d265e96e8a1185b699386eb14b
+# Source0-md5:	32c94d7154494e292241a3d629eed4ea
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -40,6 +41,7 @@ zaczn± dzia³aæ jakby znowu by³y nowe. A przynajmniej taki jest plan.
 
 %build
 %{__perl} Makefile.PL \
+	PERL_PATH=%{__perl} \
 	INSTALLDIRS=vendor
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
@@ -48,9 +50,12 @@ zaczn± dzia³aæ jakby znowu by³y nowe. A przynajmniej taki jest plan.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_examplesdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+cp -r examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,3 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{perl_vendorarch}/auto/%{name}/%{name}.so
 %{_mandir}/man1/*
 %{_mandir}/man3/*
+%{_examplesdir}/%{name}-%{version}

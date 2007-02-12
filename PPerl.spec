@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	A persistent Perl interpreter system, designed to speed up Perl scripts
-Summary(pl):	Trwa³y system interpretera Perla s³u¿±cy do przyspieszenia skryptów
+Summary(pl.UTF-8):   TrwaÅ‚y system interpretera Perla sÅ‚uÅ¼Ä…cy do przyspieszenia skryptÃ³w
 Name:		PPerl
 Version:	0.25
 Release:	1
@@ -28,14 +28,14 @@ Simply change your shebang line to "#!/usr/bin/pperl", rather than
 up, running like they were brand spanking new again. Well, that's the
 plan at least!
 
-%description -l pl
-PPerl dostarcza trwa³e ¶rodowisko dla skryptów perlowych. Znacznie
-u³atwia zamianê starego, przydatnego skryptu na stale dzia³aj±cego
+%description -l pl.UTF-8
+PPerl dostarcza trwaÅ‚e Å›rodowisko dla skryptÃ³w perlowych. Znacznie
+uÅ‚atwia zamianÄ™ starego, przydatnego skryptu na stale dziaÅ‚ajÄ…cego
 demona.
 
-Wystarczy zmieniæ pierwsz± liniê na "#!/usr/bin/pperl" zamiast "perl",
-a stare, wolne skrypty, wcze¶niej potrzebuj±ce wieków na uruchomienie,
-zaczn± dzia³aæ jakby znowu by³y nowe. A przynajmniej taki jest plan.
+Wystarczy zmieniÄ‡ pierwszÄ… liniÄ™ na "#!/usr/bin/pperl" zamiast "perl",
+a stare, wolne skrypty, wczeÅ›niej potrzebujÄ…ce wiekÃ³w na uruchomienie,
+zacznÄ… dziaÅ‚aÄ‡ jakby znowu byÅ‚y nowe. A przynajmniej taki jest plan.
 
 %prep
 %setup -q

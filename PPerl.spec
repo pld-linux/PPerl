@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	A persistent Perl interpreter system, designed to speed up Perl scripts
-Summary(pl.UTF-8):   Trwały system interpretera Perla służący do przyspieszenia skryptów
+Summary(pl.UTF-8):	Trwały system interpretera Perla służący do przyspieszenia skryptów
 Name:		PPerl
 Version:	0.25
 Release:	1

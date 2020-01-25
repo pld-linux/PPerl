@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (one test fails)
 #
-%include	/usr/lib/rpm/macros.perl
 Summary:	A persistent Perl interpreter system, designed to speed up Perl scripts
 Summary(pl.UTF-8):	Trwały system interpretera Perla służący do przyspieszenia skryptów
 Name:		PPerl
